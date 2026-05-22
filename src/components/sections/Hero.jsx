@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import euImage from '../../assets/img/eu.png';
 import { Language } from '../../types';
 
 export const Hero = ({ lang }) => {
@@ -32,7 +33,7 @@ export const Hero = ({ lang }) => {
           >
             <div className="w-[320px] aspect-[3/4] bg-surface-container rounded-[50px] overflow-hidden shadow-2xl transition-colors duration-300">
               <img 
-                src="src/assets/img/eu.png" 
+                src={euImage} 
                 alt="Portrait"
                 className="w-full h-full object-cover"
               />
