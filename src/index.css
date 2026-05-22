@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  
+  /* --- PRIMARY PALETTE --- */
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  --color-primary-fixed: #e5e2e1;
+  
+  /* --- BACKGROUNDS & SURFACES --- */
+  --color-background: #f9f9f9;
+  --color-on-background: #1a1c1c;
+  --color-surface: #f9f9f9;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #444748;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f4;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container-highest: #e2e2e2;
+  
+  /* --- UI ELEMENTS --- */
+  --color-outline: #747878;
+  --color-outline-variant: #c4c7c7;
+  --color-nav-bg: #F5F5F5;
+  --color-nav-text-active: #ffffff;
+  --color-nav-dot: #000000;
+  
+  /* --- SPECIFIC COMPONENTS --- */
+  --color-name-tag-bg: #333333;
+  --color-name-tag-text: #ffffff;
+  --color-hero-line: rgba(0, 0, 0, 0.2);
+  
+  /* --- SKILLS SECTION (EDITABLE) --- */
+  --color-skill-card-bg: white;
+  --color-skill-card-border: rgba(196, 199, 199, 0.3);
+  --color-skill-hover-alpha: 0.15; /* Opacity of background on hover */
+  
+  /* --- TECH COLORS --- */
+  --color-tech-csharp: #239120;
+  --color-tech-dotnet: #512bd4;
+  --color-tech-react: #61dafb;
+  --color-tech-typescript: #3178c6;
+  --color-tech-nodejs: #339933;
+  --color-tech-postgresql: #4169e1;
+  --color-tech-docker: #2496ed;
+  --color-tech-aws: #FF9900;
+  --color-tech-sqlserver: #CC2927;
+  --color-tech-redis: #DC382D;
+  --color-tech-rabbitmq: #FF6600;
+  --color-tech-dotnetcore: #512bd4;
+  
+  /* Custom Spacing & Radius */
+  --spacing-section-gap: 120px;
+  --radius-xl: 1.5rem;
+}
+
+@layer utilities {
+  .py-section-gap {
+    padding-top: var(--spacing-section-gap);
+    padding-bottom: var(--spacing-section-gap);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    transition-property: color, background-color, border-color, outline-color, fill, stroke, text-decoration-color;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  body {
+    @apply bg-background text-on-background;
+  }
+
+  /* --- DARK MODE PALETTE --- */
+  .dark {
+    --color-background: #000000;
+    --color-on-background: #f9f9f9;
+    --color-surface: #121212;
+    --color-on-surface: #f9f9f9;
+    --color-surface-container: #1c1c1c;
+    --color-surface-container-low: #151515;
+    --color-surface-container-high: #242424;
+    --color-outline-variant: #3a3a3c;
+    --color-on-surface-variant: #c4c7c7;
+    --color-primary: #ffffff;
+    --color-on-primary: #000000;
+    --color-nav-bg: #111111;
+    --color-nav-text-active: #000000;
+    --color-nav-dot: #ffffff;
+    --color-name-tag-bg: #ffffff;
+    --color-name-tag-text: #000000;
+    --color-hero-line: rgba(255, 255, 255, 0.2);
+    --color-skill-card-bg: #242424;
+  }
+}
+
+.markdown-body {
+  @apply font-sans;
+}
+
+.pill-shape {
+  @apply rounded-full;
+}
+
+/* Custom Typography Classes */
+.text-display-lg {
+  @apply font-sans text-[84px] font-[700] leading-[92px] tracking-[-0.04em] max-md:text-[48px] max-md:leading-[52px] max-md:tracking-[-0.02em];
+}
+
+.text-headline-md {
+  @apply font-sans text-[32px] font-[600] leading-[40px] tracking-[-0.01em];
+}
+
+.text-body-lg {
+  @apply font-sans text-[18px] font-[400] leading-[28px];
+}
+
+.text-label-sm {
+  @apply font-sans text-[14px] font-[500] leading-[20px] tracking-[0.02em];
+}
