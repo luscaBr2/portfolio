@@ -7,6 +7,10 @@ import logoEbImage from "./assets/img/logo_eb.png";
 import logoMemocashImage from "./assets/img/logo_memocash.png";
 import seniorImage from "./assets/img/senior.jpg";
 
+import projKanban from "./assets/img/proj_kanban.png";
+// //import projEda from "./assets/img/proj-eda.png";
+import projConversao from "./assets/img/proj_conversao_arquivos.png";
+
 export const DICTIONARY = {
     [Language.BR]: {
         nav: [
@@ -24,26 +28,97 @@ export const DICTIONARY = {
         skills: {
             title: "TECNOLOGIAS & FERRAMENTAS",
             list: [
-                { name: "C#", icon: "csharp/csharp-original.svg", color: "#239120" },
-                { name: ".NET", icon: "dot-net/dot-net-original.svg", color: "#512BD4" },
-                { name: "JAVA", icon: "java/java-original.svg", color: "#ED8B00" },
-                { name: "Spring Boot", icon: "spring/spring-original.svg", color: "#6DB33F" },
-                { name: "Python", icon: "python/python-original.svg", color: "#3776AB" },
-                { name: "JavaScript", icon: "javascript/javascript-original.svg", color: "#F7DF1E" },
-                { name: "TypeScript", icon: "typescript/typescript-original.svg", color: "#3178C6" },
-                { name: "SQL", icon: "mysql/mysql-original.svg", color: "#4479A1" },
-                { name: "C++", icon: "cplusplus/cplusplus-original.svg", color: "#00599C" },
-                { name: "React", icon: "react/react-original.svg", color: "#61DAFB" },
-                { name: "Tailwind", icon: "tailwindcss/tailwindcss-original.svg", color: "#06B6D4" },
-                { name: "GitHub", icon: "github/github-original.svg", color: "#181717" },
-                { name: "Node.js", icon: "nodejs/nodejs-original.svg", color: "#339933" },
-                { name: "Docker", icon: "docker/docker-original.svg", color: "#2496ED" },
-                { name: "API Rest", icon: "fastapi/fastapi-original.svg", color: "#000000" },
-                { name: "xUnit", icon: "dot-net/dot-net-plain.svg", color: "#512BD4" },
+                {
+                    name: "C#",
+                    icon: "csharp/csharp-original.svg",
+                    color: "#239120",
+                },
+                {
+                    name: ".NET",
+                    icon: "dot-net/dot-net-original.svg",
+                    color: "#512BD4",
+                },
+                {
+                    name: "JAVA",
+                    icon: "java/java-original.svg",
+                    color: "#ED8B00",
+                },
+                {
+                    name: "Spring Boot",
+                    icon: "spring/spring-original.svg",
+                    color: "#6DB33F",
+                },
+                {
+                    name: "Python",
+                    icon: "python/python-original.svg",
+                    color: "#3776AB",
+                },
+                {
+                    name: "JavaScript",
+                    icon: "javascript/javascript-original.svg",
+                    color: "#F7DF1E",
+                },
+                {
+                    name: "TypeScript",
+                    icon: "typescript/typescript-original.svg",
+                    color: "#3178C6",
+                },
+                {
+                    name: "SQL",
+                    icon: "mysql/mysql-original.svg",
+                    color: "#4479A1",
+                },
+                {
+                    name: "C++",
+                    icon: "cplusplus/cplusplus-original.svg",
+                    color: "#00599C",
+                },
+                {
+                    name: "React",
+                    icon: "react/react-original.svg",
+                    color: "#61DAFB",
+                },
+                {
+                    name: "Tailwind",
+                    icon: "tailwindcss/tailwindcss-original.svg",
+                    color: "#06B6D4",
+                },
+                {
+                    name: "GitHub",
+                    icon: "github/github-original.svg",
+                    color: "#181717",
+                },
+                {
+                    name: "Node.js",
+                    icon: "nodejs/nodejs-original.svg",
+                    color: "#339933",
+                },
+                {
+                    name: "Docker",
+                    icon: "docker/docker-original.svg",
+                    color: "#2496ED",
+                },
+                {
+                    name: "API Rest",
+                    icon: "fastapi/fastapi-original.svg",
+                    color: "#000000",
+                },
+                {
+                    name: "xUnit",
+                    icon: "dot-net/dot-net-plain.svg",
+                    color: "#512BD4",
+                },
             ],
             methodologies: {
                 title: "Arquitetura e Métodologias",
-                items: ["SCRUM", "POO", "SOLID", "Clean Architecture", "Prompt Engineering", "Diagramação UML"],
+                items: [
+                    "SCRUM",
+                    "POO",
+                    "SOLID",
+                    "Clean Architecture",
+                    "Prompt Engineering",
+                    "Diagramação UML",
+                ],
             },
         },
         projects: {
@@ -55,12 +130,28 @@ export const DICTIONARY = {
                     title: "API de Conversão de Arquivos para JSON",
                     description:
                         "API RESTful desenvolvida em C# (.NET 10.0) para conversão rápida e eficiente de diversos formatos (PDF, Excel, CSV, Word, XML, Log, PPTX) para JSON.",
-                    image: null,
+                    image: projConversao,
                     tech: [
-                        { name: "C#", icon: "csharp/csharp-original.svg", color: "#239120" },
-                        { name: ".NET", icon: "dot-net/dot-net-original.svg", color: "#512BD4" },
-                        { name: "API Rest", icon: "fastapi/fastapi-original.svg", color: "#000000" },
-                        { name: "xUnit", icon: "dot-net/dot-net-plain.svg", color: "#512BD4" },
+                        {
+                            name: "C#",
+                            icon: "csharp/csharp-original.svg",
+                            color: "#239120",
+                        },
+                        {
+                            name: ".NET",
+                            icon: "dot-net/dot-net-original.svg",
+                            color: "#512BD4",
+                        },
+                        {
+                            name: "API Rest",
+                            icon: "fastapi/fastapi-original.svg",
+                            color: "#000000",
+                        },
+                        {
+                            name: "xUnit",
+                            icon: "dot-net/dot-net-plain.svg",
+                            color: "#512BD4",
+                        },
                     ],
                     link: "https://conversao-arquivos-luscabr2.vercel.app/",
                     repo: "https://github.com/luscaBr2/ApiConversaoArquivos",
@@ -69,10 +160,23 @@ export const DICTIONARY = {
                     title: "AI-Powered EDA Assistant",
                     description:
                         "Assistente de Análise Exploratória de Dados integrado com LLM, capaz de gerar e executar consultas SQL automaticamente em SQLite a partir de linguagem natural.",
+                    image: null,
                     tech: [
-                        { name: "Python", icon: "python/python-original.svg", color: "#3776AB" },
-                        { name: "SQL", icon: "mysql/mysql-original.svg", color: "#4479A1" },
-                        { name: "SQLite", icon: "sqlite/sqlite-original.svg", color: "#003B57" },
+                        {
+                            name: "Python",
+                            icon: "python/python-original.svg",
+                            color: "#3776AB",
+                        },
+                        {
+                            name: "SQL",
+                            icon: "mysql/mysql-original.svg",
+                            color: "#4479A1",
+                        },
+                        {
+                            name: "SQLite",
+                            icon: "sqlite/sqlite-original.svg",
+                            color: "#003B57",
+                        },
                     ],
                     repo: "https://github.com/luscaBr2/ai-powered-eda-assistant",
                 },
@@ -80,10 +184,23 @@ export const DICTIONARY = {
                     title: "Fluxo de trabalho Kanban",
                     description:
                         "Aplicação Full Stack monorepo que simula o fluxo de trabalho do Pipefy, com API REST em Node.js/TypeScript e frontend em React com Drag & Drop.",
+                    image: projKanban,
                     tech: [
-                        { name: "Node.js", icon: "nodejs/nodejs-original.svg", color: "#339933" },
-                        { name: "TypeScript", icon: "typescript/typescript-original.svg", color: "#3178C6" },
-                        { name: "React", icon: "react/react-original.svg", color: "#61DAFB" },
+                        {
+                            name: "Node.js",
+                            icon: "nodejs/nodejs-original.svg",
+                            color: "#339933",
+                        },
+                        {
+                            name: "TypeScript",
+                            icon: "typescript/typescript-original.svg",
+                            color: "#3178C6",
+                        },
+                        {
+                            name: "React",
+                            icon: "react/react-original.svg",
+                            color: "#61DAFB",
+                        },
                     ],
                     link: "https://simple-kanban-workflow-frontend.vercel.app",
                     repo: "https://github.com/luscaBr2/simple-kanban-workflow",
@@ -164,26 +281,97 @@ export const DICTIONARY = {
         skills: {
             title: "TECH & TOOLS",
             list: [
-                { name: "C#", icon: "csharp/csharp-original.svg", color: "#239120" },
-                { name: ".NET", icon: "dot-net/dot-net-original.svg", color: "#512BD4" },
-                { name: "JAVA", icon: "java/java-original.svg", color: "#ED8B00" },
-                { name: "Spring Boot", icon: "spring/spring-original.svg", color: "#6DB33F" },
-                { name: "Python", icon: "python/python-original.svg", color: "#3776AB" },
-                { name: "JavaScript", icon: "javascript/javascript-original.svg", color: "#F7DF1E" },
-                { name: "TypeScript", icon: "typescript/typescript-original.svg", color: "#3178C6" },
-                { name: "SQL", icon: "mysql/mysql-original.svg", color: "#4479A1" },
-                { name: "C++", icon: "cplusplus/cplusplus-original.svg", color: "#00599C" },
-                { name: "React", icon: "react/react-original.svg", color: "#61DAFB" },
-                { name: "Tailwind", icon: "tailwindcss/tailwindcss-original.svg", color: "#06B6D4" },
-                { name: "GitHub", icon: "github/github-original.svg", color: "#181717" },
-                { name: "Node.js", icon: "nodejs/nodejs-original.svg", color: "#339933" },
-                { name: "Docker", icon: "docker/docker-original.svg", color: "#2496ED" },
-                { name: "REST API", icon: "fastapi/fastapi-original.svg", color: "#000000" },
-                { name: "xUnit", icon: "dot-net/dot-net-plain.svg", color: "#512BD4" },
+                {
+                    name: "C#",
+                    icon: "csharp/csharp-original.svg",
+                    color: "#239120",
+                },
+                {
+                    name: ".NET",
+                    icon: "dot-net/dot-net-original.svg",
+                    color: "#512BD4",
+                },
+                {
+                    name: "JAVA",
+                    icon: "java/java-original.svg",
+                    color: "#ED8B00",
+                },
+                {
+                    name: "Spring Boot",
+                    icon: "spring/spring-original.svg",
+                    color: "#6DB33F",
+                },
+                {
+                    name: "Python",
+                    icon: "python/python-original.svg",
+                    color: "#3776AB",
+                },
+                {
+                    name: "JavaScript",
+                    icon: "javascript/javascript-original.svg",
+                    color: "#F7DF1E",
+                },
+                {
+                    name: "TypeScript",
+                    icon: "typescript/typescript-original.svg",
+                    color: "#3178C6",
+                },
+                {
+                    name: "SQL",
+                    icon: "mysql/mysql-original.svg",
+                    color: "#4479A1",
+                },
+                {
+                    name: "C++",
+                    icon: "cplusplus/cplusplus-original.svg",
+                    color: "#00599C",
+                },
+                {
+                    name: "React",
+                    icon: "react/react-original.svg",
+                    color: "#61DAFB",
+                },
+                {
+                    name: "Tailwind",
+                    icon: "tailwindcss/tailwindcss-original.svg",
+                    color: "#06B6D4",
+                },
+                {
+                    name: "GitHub",
+                    icon: "github/github-original.svg",
+                    color: "#181717",
+                },
+                {
+                    name: "Node.js",
+                    icon: "nodejs/nodejs-original.svg",
+                    color: "#339933",
+                },
+                {
+                    name: "Docker",
+                    icon: "docker/docker-original.svg",
+                    color: "#2496ED",
+                },
+                {
+                    name: "REST API",
+                    icon: "fastapi/fastapi-original.svg",
+                    color: "#000000",
+                },
+                {
+                    name: "xUnit",
+                    icon: "dot-net/dot-net-plain.svg",
+                    color: "#512BD4",
+                },
             ],
             methodologies: {
                 title: "Architecture & Methodologies",
-                items: ["SCRUM", "OOP", "SOLID", "Clean Architecture", "Prompt Engineering", "UML Diagramming"],
+                items: [
+                    "SCRUM",
+                    "OOP",
+                    "SOLID",
+                    "Clean Architecture",
+                    "Prompt Engineering",
+                    "UML Diagramming",
+                ],
             },
         },
         projects: {
@@ -197,10 +385,26 @@ export const DICTIONARY = {
                         "RESTful API developed in C# (.NET 10.0) for fast and efficient conversion of various file formats (PDF, Excel, CSV, Word, XML, Log, PPTX) to JSON.",
                     image: null,
                     tech: [
-                        { name: "C#", icon: "csharp/csharp-original.svg", color: "#239120" },
-                        { name: ".NET", icon: "dot-net/dot-net-original.svg", color: "#512BD4" },
-                        { name: "REST API", icon: "fastapi/fastapi-original.svg", color: "#000000" },
-                        { name: "xUnit", icon: "dot-net/dot-net-plain.svg", color: "#512BD4" },
+                        {
+                            name: "C#",
+                            icon: "csharp/csharp-original.svg",
+                            color: "#239120",
+                        },
+                        {
+                            name: ".NET",
+                            icon: "dot-net/dot-net-original.svg",
+                            color: "#512BD4",
+                        },
+                        {
+                            name: "REST API",
+                            icon: "fastapi/fastapi-original.svg",
+                            color: "#000000",
+                        },
+                        {
+                            name: "xUnit",
+                            icon: "dot-net/dot-net-plain.svg",
+                            color: "#512BD4",
+                        },
                     ],
                     link: "https://conversao-arquivos-luscabr2.vercel.app/",
                     repo: "https://github.com/luscaBr2/ApiConversaoArquivos",
@@ -210,9 +414,21 @@ export const DICTIONARY = {
                     description:
                         "Exploratory Data Analysis Assistant integrated with LLM, capable of automatically generating and executing SQL queries in SQLite from natural language.",
                     tech: [
-                        { name: "Python", icon: "python/python-original.svg", color: "#3776AB" },
-                        { name: "SQL", icon: "mysql/mysql-original.svg", color: "#4479A1" },
-                        { name: "SQLite", icon: "sqlite/sqlite-original.svg", color: "#003B57" },
+                        {
+                            name: "Python",
+                            icon: "python/python-original.svg",
+                            color: "#3776AB",
+                        },
+                        {
+                            name: "SQL",
+                            icon: "mysql/mysql-original.svg",
+                            color: "#4479A1",
+                        },
+                        {
+                            name: "SQLite",
+                            icon: "sqlite/sqlite-original.svg",
+                            color: "#003B57",
+                        },
                     ],
                     repo: "https://github.com/luscaBr2/ai-powered-eda-assistant",
                 },
@@ -221,9 +437,21 @@ export const DICTIONARY = {
                     description:
                         "Full Stack monorepo application simulating Pipefy's workflow, featuring a Node.js/TypeScript REST API and a dynamic React front-end with Drag & Drop.",
                     tech: [
-                        { name: "Node.js", icon: "nodejs/nodejs-original.svg", color: "#339933" },
-                        { name: "TypeScript", icon: "typescript/typescript-original.svg", color: "#3178C6" },
-                        { name: "React", icon: "react/react-original.svg", color: "#61DAFB" },
+                        {
+                            name: "Node.js",
+                            icon: "nodejs/nodejs-original.svg",
+                            color: "#339933",
+                        },
+                        {
+                            name: "TypeScript",
+                            icon: "typescript/typescript-original.svg",
+                            color: "#3178C6",
+                        },
+                        {
+                            name: "React",
+                            icon: "react/react-original.svg",
+                            color: "#61DAFB",
+                        },
                     ],
                     link: "https://simple-kanban-workflow-frontend.vercel.app",
                     repo: "https://github.com/luscaBr2/simple-kanban-workflow",
