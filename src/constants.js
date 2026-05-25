@@ -8,7 +8,7 @@ import logoMemocashImage from "./assets/img/logo_memocash.png";
 import seniorImage from "./assets/img/senior.jpg";
 
 import projKanban from "./assets/img/proj_kanban.png";
-// //import projEda from "./assets/img/proj-eda.png";
+// import projEda from "assets/img/proj-eda.png";
 import projConversao from "./assets/img/proj_conversao_arquivos.png";
 
 export const DICTIONARY = {
@@ -36,7 +36,7 @@ export const DICTIONARY = {
                 {
                     name: ".NET",
                     icon: "dot-net/dot-net-original.svg",
-                    color: "#512BD4",
+                    color: "#a80fe4",
                 },
                 {
                     name: "JAVA",
@@ -115,8 +115,8 @@ export const DICTIONARY = {
                     "SCRUM",
                     "POO",
                     "SOLID",
-                    "Clean Architecture",
-                    "Prompt Engineering",
+                    "Arquitetura Limpa",
+                    "Engenharia de Prompt",
                     "Diagramação UML",
                 ],
             },
@@ -140,7 +140,7 @@ export const DICTIONARY = {
                         {
                             name: ".NET",
                             icon: "dot-net/dot-net-original.svg",
-                            color: "#512BD4",
+                            color: "#a80fe4",
                         },
                         {
                             name: "API Rest",
@@ -150,7 +150,7 @@ export const DICTIONARY = {
                         {
                             name: "xUnit",
                             icon: "dot-net/dot-net-plain.svg",
-                            color: "#512BD4",
+                            color: "#a80fe4",
                         },
                     ],
                     link: "https://conversao-arquivos-luscabr2.vercel.app/",
@@ -359,7 +359,7 @@ export const DICTIONARY = {
                 {
                     name: "xUnit",
                     icon: "dot-net/dot-net-plain.svg",
-                    color: "#512BD4",
+                    color: "#a80fe4",
                 },
             ],
             methodologies: {
@@ -403,7 +403,7 @@ export const DICTIONARY = {
                         {
                             name: "xUnit",
                             icon: "dot-net/dot-net-plain.svg",
-                            color: "#512BD4",
+                            color: "#a80fe4",
                         },
                     ],
                     link: "https://conversao-arquivos-luscabr2.vercel.app/",

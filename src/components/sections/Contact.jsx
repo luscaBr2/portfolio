@@ -4,10 +4,13 @@ import { LinkedInIcon, GithubIcon, GmailIcon, WhatsAppIcon } from '../SocialIcon
 import { SocialButton } from '../ui/SocialButton';
 import { DICTIONARY } from '../../constants';
 import { Language } from '../../types';
+import handshakeBranco from '../../assets/img/aperto-de-mao_branco.png';
+import handshakePreto from '../../assets/img/aperto-de-mao_preto.png';
 
 export const Contact = ({ lang, isDark }) => {
   const t = DICTIONARY[lang];
   const [isHoveringContact, setIsHoveringContact] = useState(false);
+  const handshakeIcon = isDark ? handshakePreto : handshakeBranco;
 
   return (
     <section id="contact" className="py-section-gap px-6 md:px-[64px]">
@@ -15,14 +18,16 @@ export const Contact = ({ lang, isDark }) => {
         <h2 className="text-display-lg uppercase text-primary mb-12 tracking-tighter text-center md:text-left">
           {t.contact.title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:items-end items-start text-left">
-          <div className="flex flex-col">
-            <p className="text-headline-sm text-on-surface-variant mb-12 leading-relaxed max-w-[540px] text-left">
-              {lang === Language.BR 
-                ? "Vamos construir algo impactante juntos — seja sua marca, seu site ou sua próxima grande ideia."
-                : "Let's build something impactful together — whether it's your brand, your website, or your next big idea."}
-            </p>
-            <div className="flex flex-col lg:flex-row items-stretch gap-8 w-full group/socials">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:items-stretch items-start text-left">
+          <div className="flex flex-col h-full justify-between gap-12">
+            <div>
+              <p className="text-headline-md max-md:text-2xl text-on-surface-variant leading-relaxed max-w-[540px] text-left font-medium">
+                {lang === Language.BR 
+                  ? "Curtiu meu trabalho? Tem alguma ideia de projeto? Entre em contato :)"
+                  : "Did you like my work? Have any project ideas? Get in touch :)"}
+              </p>
+            </div>
+            <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-14 xl:gap-16 w-full group/socials mt-auto">
               <div className="order-2 lg:order-1 flex flex-col gap-4 w-full lg:w-fit shrink-0">
                 <SocialButton 
                   href="https://www.linkedin.com/in/lucas-santos387/"
@@ -63,99 +68,37 @@ export const Contact = ({ lang, isDark }) => {
                 />
               </div>
 
-              <div className="order-1 lg:order-2 flex-1 relative lg:min-h-[300px]">
-                {/* Mobile version: Always visible */}
-                <div className="lg:hidden w-full h-full">
-                  <div className="bg-surface-container h-full p-8 rounded-2xl border border-outline-variant/30 shadow-sm relative flex flex-col items-center justify-center text-center px-6">
-                    <div className="text-display-md font-bold uppercase text-primary leading-tight">
-                      {lang === Language.BR ? (
-                        <div className="flex flex-col gap-4">
-                          <span>Curtiu meu trabalho?</span>
-                          <span>Tem alguma ideia de projeto?</span>
-                          <span>Entre em contato :)</span>
-                        </div>
-                      ) : (
-                        <div className="flex flex-col gap-4">
-                          <span>Did you like my work?</span>
-                          <span>Do you have any project ideas?</span>
-                          <span>Get in Touch :)</span>
-                        </div>
-                      )}
-                    </div>
-                    {/* Waving Hand Component */}
-                    <div className="absolute bottom-4 right-4">
-                      <div className="w-14 h-14 bg-[#1A1A1A] rounded-full flex items-center justify-center border border-white/5 shadow-inner overflow-hidden">
-                        <motion.img
-                          src="https://cdn-icons-png.flaticon.com/512/3898/3898671.png"
-                          alt="Waving Hand"
-                          referrerPolicy="no-referrer"
-                          className="w-8 h-8 object-contain invert transition-all"
-                          animate={{ 
-                            rotate: [0, 30, -30, 30, -30, 30, -30, 30, -30, 30, 0],
-                          }}
-                          transition={{ 
-                            duration: 3, 
-                            repeat: Infinity, 
-                            repeatDelay: 3,
-                            ease: "easeInOut"
-                          }}
-                        />
-                      </div>
-                    </div>
+              <div className="order-1 lg:order-2 flex-1 relative lg:min-h-[320px] flex items-center justify-center">
+                {/* Mobile version: Always visible - no background */}
+                <div className="lg:hidden w-full h-full flex items-center justify-center">
+                  <div className="h-full relative flex items-center justify-center text-center px-6 min-h-[220px]">
+                    <img 
+                      src={handshakeIcon} 
+                      alt="Contact visual"
+                      className="w-36 h-36 md:w-44 md:h-44 object-contain rounded-2xl select-none" 
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                 </div>
 
-                {/* Desktop version: Animated with hover */}
+                {/* Desktop version: Animated with hover - no background */}
                 <div className="hidden lg:block h-full w-full">
                   <AnimatePresence mode="wait">
                     {!isHoveringContact && (
                       <motion.div
                         key="contact-card"
-                        initial={{ opacity: 0, x: -20, scale: 0.95 }}
+                        initial={{ opacity: 0, x: -25, scale: 0.95 }}
                         animate={{ opacity: 1, x: 0, scale: 1 }}
-                        exit={{ opacity: 0, x: -10, scale: 0.95 }}
+                        exit={{ opacity: 0, x: -15, scale: 0.95 }}
                         transition={{ duration: 0.4, ease: "easeOut" }}
-                        className="bg-surface-container h-full p-10 rounded-2xl border border-outline-variant/30 shadow-sm relative flex flex-col items-center justify-center text-center px-12"
+                        className="h-full relative flex flex-col items-center justify-center text-center px-6"
                       >
-                        <div className="absolute -left-2 top-8 border-y-[8px] border-y-transparent border-r-[8px] border-r-surface-container" />
-                        <div className="text-display-md font-bold uppercase text-primary leading-tight max-w-[400px]">
-                          {lang === Language.BR ? (
-                            <div className="flex flex-col gap-6">
-                              <span>Curtiu meu trabalho?</span>
-                              <span>Tem alguma ideia de projeto?</span>
-                              <span>Entre em contato :)</span>
-                            </div>
-                          ) : (
-                            <div className="flex flex-col gap-6">
-                              <span>Did you like my work?</span>
-                              <span>Do you have any project ideas?</span>
-                              <span>Get in Touch :)</span>
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Waving Hand Component */}
-                        <div className="absolute bottom-6 right-6">
-                          <motion.div 
-                            className="w-18 h-18 bg-[#1A1A1A] rounded-full flex items-center justify-center border border-white/5 shadow-inner overflow-hidden"
-                          >
-                            <motion.img
-                              src="https://cdn-icons-png.flaticon.com/512/3898/3898671.png"
-                              alt="Waving Hand"
-                              referrerPolicy="no-referrer"
-                              className="w-10 h-10 object-contain invert transition-all"
-                              animate={{ 
-                                rotate: [0, 30, -30, 30, -30, 30, -30, 30, -30, 30, 0],
-                              }}
-                              transition={{ 
-                                duration: 3, 
-                                repeat: Infinity, 
-                                repeatDelay: 3,
-                                ease: "easeInOut"
-                              }}
-                            />
-                          </motion.div>
-                        </div>
+                        <img 
+                          src={handshakeIcon} 
+                          alt="Contact visual"
+                          className="w-48 h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 object-contain rounded-2xl select-none transition-transform duration-300 hover:scale-[1.03]" 
+                          referrerPolicy="no-referrer"
+                        />
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -164,8 +107,8 @@ export const Contact = ({ lang, isDark }) => {
             </div>
           </div>
 
-          <div className="bg-skill-card-bg p-8 rounded-xl border border-outline-variant/30 shadow-sm">
-            <form className="flex flex-col gap-6">
+          <div className="bg-skill-card-bg p-8 rounded-xl border border-outline-variant/30 shadow-sm h-full flex flex-col justify-between">
+            <form className="flex flex-col gap-6 h-full justify-between">
               <div className="flex flex-col gap-2">
                 <label className="text-label-sm font-bold uppercase text-on-surface-variant/60">{t.contact.form.email}</label>
                 <input 
@@ -181,13 +124,13 @@ export const Contact = ({ lang, isDark }) => {
                   className="bg-transparent border-b border-outline-variant py-2 outline-none focus:border-primary transition-colors text-body-md"
                 />
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 flex-grow min-h-[140px]">
                 <label className="text-label-sm font-bold uppercase text-on-surface-variant/60">{t.contact.form.message}</label>
                 <textarea 
-                  className="bg-transparent border-b border-outline-variant py-2 outline-none focus:border-primary transition-colors text-body-md resize-none h-32"
+                  className="bg-transparent border-b border-outline-variant py-2 outline-none focus:border-primary transition-colors text-body-md resize-none h-full flex-grow"
                 />
               </div>
-              <button className="bg-primary text-on-primary py-4 rounded-full text-label-sm font-bold uppercase tracking-widest hover:opacity-90 transition-opacity mt-4">
+              <button className="bg-primary text-on-primary py-4 rounded-full text-label-sm font-bold uppercase tracking-widest hover:opacity-90 transition-opacity mt-4 w-full">
                 {t.contact.form.submit}
               </button>
             </form>
